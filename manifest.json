@@ -4,7 +4,10 @@
   "version": "1.0.0",
   "description": "Adds a beautiful copy button to every <pre><code> block.",
   "author": "Prem Atid",
-  "license": "MIT",
+  "license": {
+    "id": "mit",
+    "url": "https://raw.githubusercontent.com/prematid/copy-code-button/main/LICENSE"
+  },
 
   "browser_specific_settings": {
     "gecko": {
