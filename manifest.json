@@ -11,7 +11,8 @@
       "strict_min_version": "115.0",
       "data_collection_permissions": {
         "telemetry": false,
-        "usage": false
+        "usage": false,
+        "required": false
       }
     }
   },
