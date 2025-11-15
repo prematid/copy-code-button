@@ -1,0 +1,77 @@
+/* ==== Clean Code Copier - Button Styles ==== */
+
+/* Base button style */
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 6px 10px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  color: white;
+  background: #2563eb; /* Tailwind blue-600 */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+  z-index: 1000;
+  user-select: none;
+  outline: none;
+}
+
+/* Hover effect */
+.copy-btn:hover {
+  background: #1d4ed8; /* blue-700 */
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Active/click */
+.copy-btn:active {
+  transform: translateY(0);
+}
+
+/* Success state (Copied!) */
+.copy-btn.copied {
+  background: #16a34a; /* green-600 */
+}
+
+/* Ensure pre is positioned */
+pre {
+  position: relative !important;
+}
+
+/* Optional: Slight padding so button doesn't touch code */
+pre:has(.copy-btn) {
+  padding-top: 36px !important; /* Space for button */
+}
+
+/* Responsive: Smaller screens */
+@media (max-width: 640px) {
+  .copy-btn {
+    padding: 4px 8px;
+    font-size: 11px;
+    top: 6px;
+    right: 6px;
+  }
+  pre:has(.copy-btn) {
+    padding-top: 32px !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .copy-btn {
+    border: 2px solid white;
+  }
+}
+
+/* Dark mode override (if site uses dark code blocks) */
+.hljs,
+code,
+pre code {
+  background: inherit !important;
+}
