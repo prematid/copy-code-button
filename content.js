@@ -15,12 +15,18 @@ document.querySelectorAll('pre code').forEach(block => {
     border-radius: 4px; cursor: pointer; z-index: 1000;
   `;
 
-  button.onclick = () => {
+  button.onclick = async () => {
     const code = block.textContent;
-    navigator.clipboard.writeText(code);
+    await navigator.clipboard.writeText(code);
+
     button.textContent = 'Copied!';
-    setTimeout(() => button.textContent = 'Copy', 2000);
-  };
+    button.classList.add('copied');
+
+    setTimeout(() => {
+        button.textContent = 'Copy';
+        button.classList.remove('copied');
+    }, 2000);
+    };
 
   pre.style.position = 'relative';
   pre.appendChild(button);
