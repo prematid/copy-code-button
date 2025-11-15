@@ -8,12 +8,7 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "clean-code-copier@prematid.github.io",
-      "strict_min_version": "115.0",
-      "data_collection_permissions": {
-        "telemetry": false,
-        "usage": false,
-        "required": []
-      }
+      "strict_min_version": "115.0"
     }
   },
 
