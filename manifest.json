@@ -1,18 +1,36 @@
 {
   "manifest_version": 3,
   "name": "Clean Code Copier",
-  "version": "1.0",
-  "description": "Copy code without junk. One click.",
-  "icons": { "48": "icon.png" },
-  "action": {
-    "default_popup": "popup.html"
+  "version": "1.0.0",
+  "description": "Adds a beautiful copy button to every <pre><code> block.",
+  "author": "Prem Atid",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "clean-code-copier@prematid.github.io",
+      "strict_min_version": "115.0",
+      "data_collection_permissions": {
+        "telemetry": false,
+        "usage": false
+      }
+    }
   },
-  "permissions": ["activeTab"],
+
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["content.js"],
-      "css": ["styles.css"]
+      "css": ["styles.css"],
+      "run_at": "document_idle"
     }
-  ]
+  ],
+
+  "permissions": ["clipboardWrite"],
+  "host_permissions": ["<all_urls>"]
 }
