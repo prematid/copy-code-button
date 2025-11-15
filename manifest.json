@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "Adds a beautiful copy button to every <pre><code> block.",
   "author": "Prem Atid",
+  "license": "MIT",
 
   "browser_specific_settings": {
     "gecko": {
